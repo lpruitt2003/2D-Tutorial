@@ -5,11 +5,10 @@ using UnityEngine;
 public class EnemyShooter : MonoBehaviour
 {
     [SerializeField] float xSpeed = 5;
-    //[SerializeField] float ySpeed = 5;
     [SerializeField] GameManager manager;
     [SerializeField] GameObject enemyLaser;
-    [SerializeField] float fireRate = 1f; // Set fire rate to 1 second
-    private float nextFireTime = 0f; // Timer to track when to fire next
+    [SerializeField] float fireRate = 1f;
+    private float nextFireTime = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +24,7 @@ public class EnemyShooter : MonoBehaviour
         if (Time.time >= nextFireTime)
         {
             Instantiate(enemyLaser, transform.position, Quaternion.identity);
-            nextFireTime = Time.time + fireRate; // Reset the fire timer
+            nextFireTime = Time.time + fireRate;
         }
     }
 
