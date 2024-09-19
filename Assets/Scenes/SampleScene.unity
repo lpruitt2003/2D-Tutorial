@@ -431,7 +431,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRate: 2
+  tankSpawnRate: 15
+  shooterSpawnRate: 5
   enemyPrefab: {fileID: 6632211278898365900, guid: 0513ae734abecb84da6e3687162d06c5, type: 3}
+  tankPrefab: {fileID: 3335530940045213485, guid: 08fd668729f645544b1854a79367e5b7, type: 3}
+  shooterPrefab: {fileID: 6207876090699730362, guid: dc6c1f2aa4274164198685dcae3fbbb9, type: 3}
+  tankInitialDelay: 5
+  shooterInitialDelay: 3
 --- !u!4 &759122680
 Transform:
   m_ObjectHideFlags: 0
@@ -837,6 +843,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2561713832000090033, guid: d7b4a081dd59bb34289dabc37fde0081, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4165787867328840398, guid: d7b4a081dd59bb34289dabc37fde0081, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

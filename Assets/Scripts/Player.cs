@@ -25,4 +25,14 @@ public class player : MonoBehaviour
             Instantiate(laser, transform.position, Quaternion.identity);
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "EnemyLaser")
+        {
+            GameManager.instance.OnServerInitialized();
+        }
+        Destroy(gameObject);
+        Destroy(collision.gameObject);
+    }
 }
